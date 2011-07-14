@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>iPhone.css</title>
+<link rel="stylesheet" href="iphone.css" type="text/css" />    
+<style>
+/* toolbar icons available from: http://blog.twg.ca/2010/11/retina-display-icon-set/ Creative Commons Attribution-Share Alike license */
+#tools-tb .icon { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAA0CAYAAACU7CiIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2FJREFUWMPt1s9rFGccx/FstQYJSKGkVqRCidRCm0pLbh5EPNiTJw+ectFbUQl2Q3+wtQ02pnUREXIuOQpqq2ltN7TdtsaD/gPBgFmTSbLJmJn9MTM7s7Oz++17YQLDVMvu5DnmgRfPPD92Prs7zMy3p2e70VotOYhJLMGAifvYrSyk2Wz1ccIxFCCbmJ9vrykLCoJmFhKjEXICrygJ8RvBEExIhNYImseVXpu6H2QhERr+E+LVG7s8P+h3641k14wP5iARN1+y7xye4odEQTXPz0EiHIzE9pxFEK7riYJs159ACxLh27X6BatWT3F8Bo3ImpEoyHLqA1XH0yExLqbDfnPOw2yioKrtnazYrg3pQL5ie8NdBZQsN4U0LEgHSmXLPUVQ5zewUXF6zWptHAEk1D5+DB3NyLyPRXT3S56XnH6j7ExCYm61181K7RBfJIMbuIYRo1J7q6sQ3bQHCZqBROkl5+FG2dmj5AmwblhHdNOa0w1Lopif10v2B0pCihvW8NqGtQyJKa4Zlppn2urzagYuJK64Uf1kywEreuU0rsPBLJ6gBQn7KwRt/RWgrZcLEIyG472ohnNTK3p1h5K/bGmt7ENwPhzvhIdHS+vlA8reM89WzTl4z4qmhku4zXhhsVh6X+kLrbBqHkN6YcW0IdAYf9yjunHSfThKQB7LmGK8v2e7qW5D2dmDmMQSDJi4D3UF5EdXH/RhDAVIxHx7TVnQh1cfZCExGk5ATQF5+Pt/hmBCIjSoLSAHv/s7C4nQcPwF+3ahH8mu2XsTf+UgETdfsu8cniJZAfnueD4HiXAwEttzFkG4nqyAfOfbPyfQgkT4uIAUzqARWUtWQA5c/mMAOiTGxXTYb855SFZAvj32+0nYkA7k0V3ZdeCbmRTSsCAdKOEUOr+B93+d68U4AkioffwYOpqReR+L6O6XvPnVb/2YhMTcCtcPIYMbuIYRdFdAvpH5dRAzkJiHUFNAvv7lL0cwB4mZh5oC8rUvfh7GMiSmCDXPtD2fT2fgQl5g6wVk32f3TuM6HMziCVqQsL+Crb8Cdo/eLUAwGo73ohrOTUFNAdmb/smH4Hw43gkPj6CugHz10x/n4EHDJdzGAtQWkDsu3jmGNGwINKgvIFMX7+zDUeSxjClsF5D/2/4FFua2o7+PJC0AAAAASUVORK5CYII=); }
+#home-tb .icon { background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAA0CAYAAACU7CiIAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABAJJREFUWIXt1k1oFGccx3FLrGkJ1BKlFAvFWiiFWkpDPehlToLHgMiCMUgGBLFiDqbRtknbxDY0sV5EAx6ignhS00mb0BebtOnm4EVaLIIglNA03cS87ctsNvuS+fc74dkw+7jzNCY5FNqFDzPP//nN87vs4dmw4d/4Kyx6FZ7nHcY97NP2NqPaf65H0bZFz7sMQZu2Vwvbf66pJF9Y3MEht/MFT4pYX8zlC1tU0Tj82Z+rLuGwXbgLQQE31LuvH9W4o9a/rqpkIZffjVEIJnAMkWyu0KxmvkFMqfcnL8pk8xGkIRhDLW4iifM4hLjaL/plxQVuJrtxPpM7ihwEQziAQbUu6kYDHgZmv62oJJXOVrnz2XbIkkz2Fs8GjCzPSl1HPbmoWifwrrEk4S5spehKys3KknT2Eup5f7A8Ky9K7iB61XcFnEmkMs88VhJPZY7E3Uw/m7LEXWhKuJkW3mPLM7P75Bv57lxxxpk9/rklRXPJzCQEaZyaS2W6eCbVbAkfNcIK6AzuI8Z3jTw74KnZZEnRbGJ+GlnU4QLyEE2N9k2kTMZFK04g55+rF21C5Uw8fXU6nvYguqk5N4LtAc3lcljknBb/PP/csn8IPu6DrIMu4z9vctZ1IOU8mnUH0BMQDcui01gUm046kHImZlI7g1nW+8OyMBf9NZV0ICEsLWsbsuai8UcJBxLC0rK2IWsuGpuMO5AQlpa1DVlz0R8TcQcSwtKytiFrLhqNzTmQEJaWtQ1Zc9Hv4zPDkBB7texxQ7b7n4quYSbEHi1bZ8h+bCz6/7fuv3e+GKnAYdzDPm1vM6r955qLas5Gt+EyBG3aXi1s/7mmkrfPRnfgNiTgIrao/XE1W/0t9a2un3fhLgQF3FDvvn5U445ar+6W+mbn8G6MQjCBY4igWc18g5hS709e9MbnP0WQhmAMtbiJJM7jEOJqv2jlt9TXO37ciKPIQTCEAxhU66JuNOBhYLayW+prnw1VoR2i3EIDRgKzoOuoR1StEzDfUl/9dHArrkCUS6jHg8CsnCgOoletCziDx2+pr7T/cAT9EKUJLYgFZib30YhzgVmPf25J0ctt309CkMYpdCGpZkWNsAI6tf2YynTAU7PSW+pLn3w3jSzqcAF5iKZG+yZSJuOiFSeQ888tKXrxo283oRJX4UHKiGB7QHNIbhEt6rzyt9QXWr/pg6wD8y11y4cDDiTEAHoCooas+b7w/Af9DiTETi2735A1Fz33/tcOJISlZW1D1lxUdforBxLC0rK2IWsuera5z4GEsLSsbciaiyrfcxxICEvL2oasuejppi8dSAhLy9qGrLmo4mTvMCTEXi173JA131KfOtl7DTMh9mjZOkP2P3BL/RuDKlDiMK9rAQAAAABJRU5ErkJggg==); }
+</style>
+
+</head>
+<body>
+
+<div id="header"><a href="#" class='back'>Back</a><h1>Home</h1></div>
+<div id="wrapper">
+	<div id="scroller">
+	  <section id='home' title='Home' class='current'>
+	    <div>
+      <ul class='menu'>
+        <li class='arrow'>Item 1</li>
+        <li><span class='counter green'>4</span>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+      </div>
+    </section>
+    <section id='tools' title='Tools'>
+      <div>
+      <ul class='menu'>
+        <li class='arrow'>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+      </div>
+    </section>
+	  
+	</div>
+</div>
+
+
+<div id="footer">
+  <ul>
+    <li>
+      <a href="#home" id='home-tb' class='panel active'>
+        <div class='icon'></div>
+        <div class='title'>Home</div>
+      </a>
+    </li>
+    <li>
+      <a href="#tools" id='tools-tb' class='panel'>
+        <div class='icon'></div>
+        <div class='title'>Tools</div>
+      </a>
+    </li>
+  </ul>
+</div>
+<script src="js/iscroll.js"></script>
+<script src="js/zepto.min.js"></script>
+
+<script>
+  var myScroll;
+  document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+  myScroll = new iScroll('wrapper');
+  // convenience function I use, up to you to use
+  function showSection(e) {
+    var id = (e.currentTarget ?  "#"+e.currentTarget.href.split("#")[1] : e), section = $(id);
+    $(".current").removeClass("current").addClass("reverse");
+    var title = section.addClass("current").attr("title");
+    $(".active").removeClass("active")
+    $(id+"-tb").addClass("active");
+    if (title == "") {
+      $("#header").hide();
+      $("#wrapper").addClass("noheader");
+    } else {
+      $("#header").html("<h1>"+title+"</h1>").show();
+      $("#wrapper").removeClass("noheader");
+    }
+    // wait for DOM to settle
+    setTimeout(function () {
+    		myScroll.refresh();
+        myScroll.scrollTo(0,0,1);
+    	}, 0);
+  }
+  showSection("#home")
+  $("a").bind("click", showSection);
+</script>
+</body>
+</html>
