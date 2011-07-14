@@ -16,7 +16,7 @@
 </head>
 <body>
 
-<div id="header"><a href="#" class='back'>Back</a><h1>Home</h1></div>
+<div id="header"><a href="#" id='back'>Back</a><h1>Home</h1></div>
 <div id="wrapper">
 	<div id="scroller">
 	  <section id='home' title='Home' class='current'>
@@ -29,7 +29,7 @@
       </ul>
       </div>
     </section>
-    <section id='tools' title='Tools'>
+    <section id='tools' title='Tools' data-chain="true">
       <div>
       <ul class='menu'>
         <li class='arrow'>Item 1</li>
@@ -67,28 +67,9 @@
   var myScroll;
   document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
   myScroll = new iScroll('wrapper');
-  // convenience function I use, up to you to use
-  function showSection(e) {
-    var id = (e.currentTarget ?  "#"+e.currentTarget.href.split("#")[1] : e), section = $(id);
-    $(".current").removeClass("current").addClass("reverse");
-    var title = section.addClass("current").attr("title");
-    $(".active").removeClass("active")
-    $(id+"-tb").addClass("active");
-    if (title == "") {
-      $("#header").hide();
-      $("#wrapper").addClass("noheader");
-    } else {
-      $("#header").html("<h1>"+title+"</h1>").show();
-      $("#wrapper").removeClass("noheader");
-    }
-    // wait for DOM to settle
-    setTimeout(function () {
-    		myScroll.refresh();
-        myScroll.scrollTo(0,0,1);
-    	}, 0);
-  }
-  showSection("#home")
-  $("a").bind("click", showSection);
 </script>
+
+<!-- iphone.js is just zepto helper functions for more 'iphoney' fun. -->
+<script src="js/iphone.js"></script>
 </body>
 </html>
