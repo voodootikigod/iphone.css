@@ -14,7 +14,8 @@ Chris
  
  
  
-* I can only promise fame**, not fortune.
+\* I can only promise fame**, not fortune.
+
 ** I can't really even promise fame.
 
 
