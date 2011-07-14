@@ -19,4 +19,4 @@ Chris
 ** I can't really even promise fame.
 
 
-License: [WTFPL](http://sam.zoy.org/wtfpl/)
+For licensing information see LICENSE file provided
