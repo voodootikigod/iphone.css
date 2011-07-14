@@ -16,3 +16,6 @@ Chris
  
 * I can only promise fame**, not fortune.
 ** I can't really even promise fame.
+
+
+License: [WTFPL](http://sam.zoy.org/wtfpl/)
