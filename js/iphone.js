@@ -23,7 +23,7 @@ function showSection(e, skipchain) {
     $("#header").hide();
     $("#wrapper").addClass("noheader");
   } else {
-    $("#header h1").text(title).show();
+    $("#header").show().find("h1").text(title)
     $("#wrapper").removeClass("noheader");
   }
   // wait for DOM to settle
@@ -43,9 +43,3 @@ function back(e) {
   }
 }
 
-
-$(document).ready(function () {
-  showSection("#home")
-  $("a").bind("click", showSection);
-  $("#back").bind("click", back)
-})

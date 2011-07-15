@@ -62,14 +62,22 @@
 </div>
 <script src="js/iscroll.js"></script>
 <script src="js/zepto.min.js"></script>
+<!-- iphone.js is just zepto helper functions for more 'iphoney' fun. -->
+<script src="js/iphone.js"></script>
 
 <script>
   var myScroll;
   document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
   myScroll = new iScroll('wrapper');
+  
+  $(document).ready(function () {
+    showSection("#home")
+    $("a").bind("click", showSection);
+    $("#back").bind("click", back)
+  })
+
 </script>
 
-<!-- iphone.js is just zepto helper functions for more 'iphoney' fun. -->
-<script src="js/iphone.js"></script>
+
 </body>
 </html>
